@@ -1,0 +1,52 @@
+<section class="container">
+  <img src="https://i.imgur.com/2XJ8oLr.png" alt="login img" />
+  <article class="login">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <p>Welcome Back!</p>
+      <input type="email" placeholder="Email" formControlName="email" />
+
+      <div *ngIf="email?.touched && email?.errors?.['required']" class="danger">
+        Email is required
+      </div>
+
+      <div *ngIf="email?.touched && email?.errors?.['email']" class="danger">
+        Please enter a valid email address
+      </div>
+
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+
+      <div
+        *ngIf="password?.touched && password?.errors?.['required']"
+        class="danger"
+      >
+        Password is required
+      </div>
+
+      <div
+        *ngIf="password?.touched && password?.errors?.['minlength']"
+        class="danger"
+      >
+        Password must be longer than
+        {{ password?.errors?.['minlength']?.requiredLength }} characters
+      </div>
+
+      <div *ngIf="errorSession" class="danger">Error while logging in</div>
+
+      <button class="btn" [disabled]="!loginForm.valid">
+        Login
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </form>
+    <p class="account">
+      Don't have an account? <a routerLink="/auth/register">Register</a>
+    </p>
+    <p class="account">
+      Or <a routerLink="/admin/register">Register as an Admin</a>
+    </p>
+  </article>
+</section>

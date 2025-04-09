@@ -1,0 +1,136 @@
+.footer-container {
+  background-color: #e7e7e3;
+}
+
+.footer-discount {
+  background-color: #4a69e2;
+  margin: 0 3rem;
+  border-radius: 1rem;
+}
+
+.discount-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem;
+}
+
+.discount-info {
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  gap: 1.8rem;
+}
+
+.discount-container img {
+  width: 450px;
+}
+
+.discount-info p {
+  font-size: 1.1rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  width: 480px;
+}
+
+.btn {
+  background-color: #232321;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input {
+  background-color: #4a69e2;
+  border: 0.5px solid #fafafa;
+  padding: 0.5rem 1rem;
+  color: #fafafa;
+  width: 300px;
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: #fafafa;
+}
+
+input:focus {
+  outline: 1px solid #fafafa;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+footer {
+  background-color: #232321;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  color: #fafafa;
+  gap: 2rem;
+}
+
+.footer-info {
+  display: flex;
+  gap: 6rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us p {
+  width: 400px;
+}
+
+h3 {
+  color: #ffa52f;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.info-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.info .follow-us {
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.follow-us a {
+  color: #fafafa;
+  font-size: 1.2rem;
+}
+
+.info li,
+.about-us p {
+  font-size: 1.08rem;
+}
+
+.danger {
+  width: 300px;
+}
+
+.info a {
+  color: #fafafa;
+}

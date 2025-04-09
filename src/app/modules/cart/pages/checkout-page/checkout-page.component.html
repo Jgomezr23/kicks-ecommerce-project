@@ -1,0 +1,260 @@
+<ng-template #noCartItems>
+  <section class="template">
+    <h1>You don't have any items in the cart</h1>
+  </section>
+</ng-template>
+
+<section class="container" *ngIf="totalPrice > 1; else noCartItems">
+  <h1>Checkout</h1>
+  <section class="checkout">
+    <article class="checkout-details">
+      <section class="info-container">
+        <h2><i class="fa-solid fa-user"></i>Contact Details</h2>
+        <div class="divider"></div>
+        <div class="contact-details">
+          <ul>
+            <li><span>First Name: </span>{{ currentUser.firstName }}</li>
+            <li><span>Last Name: </span>{{ currentUser.lastName }}</li>
+            <li><span>Email Address: </span>{{ currentUser.email }}</li>
+            <li><span>Phone Number: </span>{{ currentUser.phoneNumber }}</li>
+          </ul>
+        </div>
+      </section>
+      <section class="info-container">
+        <h2><i class="fa-solid fa-house"></i>Address</h2>
+        <div class="divider"></div>
+        <form [formGroup]="addressForm">
+          <label for="address">Shipping Address</label>
+          <input
+            id="address"
+            type="text"
+            placeholder="Ex. 218 Newbury Street"
+            formControlName="address"
+          />
+
+          <div
+            *ngIf="address?.touched && address?.errors?.['required']"
+            class="danger"
+          >
+            Address is required
+          </div>
+
+          <div
+            *ngIf="address?.touched && address?.errors?.['minlength']"
+            class="danger"
+          >
+            Address must be longer than
+            {{ address?.errors?.['minlength']?.requiredLength }} characters
+          </div>
+
+          <label for="references"
+            >Additional references from this address</label
+          >
+          <input
+            id="references"
+            type="text"
+            placeholder="Ex. House with white doors"
+            formControlName="references"
+          />
+
+          <div
+            *ngIf="references?.touched && references?.errors?.['required']"
+            class="danger"
+          >
+            References is required
+          </div>
+
+          <div
+            *ngIf="references?.touched && references?.errors?.['minlength']"
+            class="danger"
+          >
+            References must be longer than
+            {{ references?.errors?.['minlength']?.requiredLength }} characters
+          </div>
+        </form>
+      </section>
+      <section class="info-container">
+        <h2><i class="fa-solid fa-truck"></i>Delivery</h2>
+        <div class="divider"></div>
+        <article class="delivery-option">
+          <p class="delivery">
+            Standard Delivery: <span class="price">$6.99</span>
+          </p>
+        </article>
+        <p>
+          You will be contacted via email with details of when you will receive
+          your order.
+        </p>
+      </section>
+      <section class="info-container">
+        <h2><i class="fa-solid fa-cart-shopping"></i>Checkout</h2>
+        <div class="divider"></div>
+        <form [formGroup]="checkoutForm">
+          <label for="name">Card name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Ex. John Doe"
+            formControlName="name"
+          />
+
+          <div
+            *ngIf="name?.touched && name?.errors?.['required']"
+            class="danger"
+          >
+            Card name is required
+          </div>
+
+          <div
+            *ngIf="name?.touched && name?.errors?.['minlength']"
+            class="danger"
+          >
+            Card name must be longer than
+            {{ name?.errors?.['minlength']?.requiredLength }} characters
+          </div>
+
+          <label for="card-num">Card Number</label>
+          <input
+            id="card-num"
+            type="text"
+            placeholder="Ex. 1234567890"
+            formControlName="cardNumber"
+            (input)="onNumberInput($event)"
+          />
+
+          <div
+            *ngIf="cardNumber?.touched && cardNumber?.errors?.['required']"
+            class="danger"
+          >
+            Card number is required
+          </div>
+
+          <div
+            *ngIf="cardNumber?.touched && cardNumber?.errors?.['invalidCardNumber']"
+            class="danger"
+          >
+            Card number must have exactly 15 numbers
+          </div>
+
+          <div class="exp-cvc-container">
+            <div class="mini-form">
+              <label for="expiration">Expiration</label>
+              <div class="short-input">
+                <input
+                  id="expiration"
+                  type="text"
+                  placeholder="Ex. 11"
+                  formControlName="expirationMonth"
+                  (input)="onNumberInput($event)"
+                />
+                <span>/</span>
+                <input
+                  type="text"
+                  placeholder="Ex. 29"
+                  formControlName="expirationYear"
+                  (input)="onNumberInput($event)"
+                />
+              </div>
+            </div>
+
+            <div class="mini-form">
+              <label for="cvc">CVC</label>
+              <div class="short-input">
+                <input
+                  id="cvc"
+                  type="text"
+                  placeholder="Ex. 193"
+                  formControlName="cvc"
+                  (input)="onNumberInput($event)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngIf="expirationMonth?.touched && expirationMonth?.errors?.['required']"
+            class="danger"
+          >
+            Expiration Month is required
+          </div>
+
+          <div
+            *ngIf="expirationMonth?.touched && expirationMonth?.errors?.['invalidExpNumber']"
+            class="danger"
+          >
+            Expiration Month must have exactly 2 numbers
+          </div>
+
+          <div
+            *ngIf="expirationMonth?.touched && expirationMonth?.errors?.['min'] || expirationMonth?.errors?.['max']"
+            class="danger"
+          >
+            Expiration Month must be between 1 and 12
+          </div>
+
+          <div
+            *ngIf="expirationYear?.touched && expirationYear?.errors?.['required']"
+            class="danger"
+          >
+            Expiration Year is required
+          </div>
+
+          <div
+            *ngIf="expirationYear?.touched && expirationYear?.errors?.['invalidExpNumber']"
+            class="danger"
+          >
+            Expiration Year must have exactly 2 numbers
+          </div>
+
+          <div
+            *ngIf="expirationYear?.touched && expirationYear?.errors?.['min']"
+            class="danger"
+          >
+            Expiration Year must be greater than or equal to 24
+          </div>
+
+          <div *ngIf="cvc?.touched && cvc?.errors?.['required']" class="danger">
+            CVC Number is required
+          </div>
+
+          <div
+            *ngIf="cvc?.touched && cvc?.errors?.['invalidCVCNumber']"
+            class="danger"
+          >
+            CVC Number must have exactly 3 numbers
+          </div>
+        </form>
+      </section>
+      <button
+        type="button"
+        class="btn"
+        [disabled]="!checkoutForm.valid || !addressForm.valid"
+        (click)="checkOut()"
+      >
+        Review and pay
+      </button>
+    </article>
+    <article class="summary-container">
+      <h2><i class="fa-solid fa-bag-shopping"></i>Order Summary</h2>
+      <section class="summary">
+        <div class="row">
+          <p>Order</p>
+          <p>{{ totalPrice - 6.99 | currency : "USD" }}</p>
+        </div>
+        <div class="row">
+          <p>Delivery</p>
+          <p>$6.99</p>
+        </div>
+        <div class="row">
+          <p>Sales Tax</p>
+          <p>0</p>
+        </div>
+        <div class="divider"></div>
+        <div class="row bold">
+          <p>Total</p>
+          <p>{{ totalPrice | currency : "USD" }}</p>
+        </div>
+      </section>
+    </article>
+  </section>
+</section>

@@ -1,0 +1,267 @@
+{
+  "users": [
+    {
+      "id": "be47",
+      "firstName": "Geraldine",
+      "lastName": "Gomez",
+      "phoneNumber": "3193108099",
+      "email": "geralgomez1403@gmail.com",
+      "password": "U2FsdGVkX18aAAtlOjTEuamnU7umLc2VInTdF0nIR1s=",
+      "role": "ADMIN"
+    },
+    {
+      "id": "3ffe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "phoneNumber": "1234567890",
+      "email": "test@gmail.com",
+      "password": "U2FsdGVkX19qEqSv/aRxfAfqyD9HjMF6tZeYNB5z7Ow=",
+      "role": "USER"
+    }
+  ],
+  "shoes": [
+    {
+      "id": "1",
+      "name": "Gazelle Shoes",
+      "about": "Iconic sneakers made from an elegant blend of suede and leather with unique details. These adidas Gazelle sneakers take your everyday style to the next level. Originally designed in the '60s as a training shoe, the Gazelle is now an urban fashion icon that adapts perfectly from day to night. Premium suede and leather wrap your feet in retro comfort, while the iconic rubber cupsole provides a soft ride.",
+      "newRelease": "false",
+      "images": [
+        "https://i.imgur.com/FKfCYiz.jpg",
+        "https://i.imgur.com/7xp5lLh.jpg",
+        "https://i.imgur.com/yN9zyMf.jpg",
+        "https://i.imgur.com/G55aQxe.jpg"
+      ],
+      "price": 120,
+      "colors": [
+        "Almost Blue / Bright Blue / Almost Yellow",
+        "Almost Yellow / Maroon / Wonder White",
+        "Ivory / Cloud White / Bold Gold"
+      ],
+      "sizes": [
+        "5",
+        "5.5",
+        "6",
+        "6.5",
+        "7",
+        "7.5",
+        "8",
+        "8.5",
+        "9",
+        "9.5",
+        "10"
+      ],
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Trae young 3 basketball shoes",
+      "about": "Signature sneakers from trae young and adidas basketball. Get ready for what's next. This iteration of the signature shoes from Trae Young and adidas Basketball is all about the future of the game. Celebrating Trae's unique look, crowd-pleasing bravado and expressive, futuristic style of play, these shoes are built for optimized motion and stability, two elements of Trae's game that have elevated him to superstar status.",
+      "newRelease": "true",
+      "images": [
+        "https://i.imgur.com/xFryZAl.jpg",
+        "https://i.imgur.com/xGpcILk.jpg",
+        "https://i.imgur.com/P0aVkz9.jpg",
+        "https://i.imgur.com/6m0SAzu.jpg"
+      ],
+      "price": 140,
+      "colors": [
+        "Off White / Vivid Red / Core Black",
+        "Arctic Night / Core Black / Acid Orange",
+        "Wonder Beige / Grey Five / Wonder White"
+      ],
+      "sizes": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5"],
+      "categoryId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Adizero SL Running Shoes",
+      "about": "Speed-enhancing running shoes made for daily training. Optimized for speed when it comes to achieving your goals, every second counts. From training to race day, powerful performances call for high-tech gear that's optimized for speed. Meet the latest range of lightweight running staples that help you to push beyond your limits without distraction. The adizero SL running shoes hand-pick the best from our world record-breaking Adizero franchise.",
+      "newRelease": "true",
+      "images": [
+        "https://i.imgur.com/tV24A4W.jpg",
+        "https://i.imgur.com/Ta4tRxK.jpg",
+        "https://i.imgur.com/nYYNf7i.jpg",
+        "https://i.imgur.com/n15KyP4.jpg"
+      ],
+      "price": 48,
+      "colors": [
+        "Arctic Night / Cloud White / Wonder Blue",
+        "Cloud White / Core Black / Bright Red",
+        "Cloud White / Core Black / Carbon"
+      ],
+      "sizes": [
+        "6",
+        "6.5",
+        "7",
+        "7.5",
+        "8",
+        "8.5",
+        "9",
+        "9.5",
+        "10",
+        "10.5",
+        "11"
+      ],
+      "categoryId": "3"
+    },
+    {
+      "id": "4",
+      "name": "Terrex Free Hiker 2.0",
+      "about": "The Adidas Terrex Free Hiker 2 brings comfort and confidence to your everyday adventure. It's time to enjoy your outdoor experience. Find confidence in the great outdoors with the new adidas TERREX Free Hiker 2. Its Continental™ rubber grip provides reliable traction on your hikes. BOOST delivers incredible energy return and instant comfort with each step.",
+      "newRelease": "true",
+      "images": [
+        "https://i.imgur.com/VFZt2nr.jpg",
+        "https://i.imgur.com/xQEpsNa.jpg",
+        "https://i.imgur.com/SQaaQkb.jpg",
+        "https://i.imgur.com/4xNSPsR.jpg"
+      ],
+      "price": 180,
+      "colors": [
+        "Sesame / Talc / Real Magenta",
+        "Wonder Beige / Core Black / Semi Impact Orange",
+        "Silver Green / Crystal Jade / Carbon"
+      ],
+      "sizes": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11"],
+      "categoryId": "4"
+    },
+    {
+      "id": "5",
+      "name": "TENIS ADI2000",
+      "about": "The Adi2000 sneakers revive the iconic skate shoe style of the early 2000s. With a smooth leather upper in varsity-inspired colors, these adidas sneakers bring the Y2K aesthetic in a modern way.",
+      "newRelease": "true",
+      "images": [
+        "https://i.imgur.com/jhHwIFP.jpg",
+        "https://i.imgur.com/L2GxW5t.jpg",
+        "https://i.imgur.com/gky5eU5.jpg",
+        "https://i.imgur.com/SuRVEte.jpg"
+      ],
+      "price": 170,
+      "colors": [
+        "Core Black / Cloud White / Maroon",
+        "Charcoal / Cloud White / Putty Grey",
+        "SCore Black / Cloud White / Collegiate Green"
+      ],
+      "sizes": [
+        "6.5",
+        "7",
+        "7.5",
+        "8",
+        "8.5",
+        "9",
+        "9.5",
+        "10",
+        "10.5",
+        "11",
+        "11.5",
+        "12"
+      ],
+      "categoryId": "1"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "sneakers"
+    },
+    {
+      "id": "2",
+      "name": "basketball"
+    },
+    {
+      "id": "3",
+      "name": "runners"
+    },
+    {
+      "id": "4",
+      "name": "outdoor"
+    }
+  ],
+  "cart": [
+    {
+      "id": "9adf",
+      "userId": "3ffe",
+      "items": [
+        {
+          "id": "1",
+          "name": "Gazelle Shoes",
+          "color": "Almost Blue / Bright Blue / Almost Yellow",
+          "size": "5",
+          "price": 120,
+          "image": "https://i.imgur.com/FKfCYiz.jpg",
+          "quantity": 3
+        },
+        {
+          "id": "4",
+          "name": "Terrex Free Hiker 2.0",
+          "color": "Silver Green / Crystal Jade / Carbon",
+          "size": "10",
+          "price": 180,
+          "image": "https://i.imgur.com/VFZt2nr.jpg",
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 726.99
+    },
+    {
+      "id": "2b0b",
+      "userId": "3ffe",
+      "items": [
+        {
+          "id": "1",
+          "name": "Gazelle Shoes",
+          "color": "Almost Blue / Bright Blue / Almost Yellow",
+          "size": "5",
+          "price": 120,
+          "image": "https://i.imgur.com/FKfCYiz.jpg",
+          "quantity": 2
+        },
+        {
+          "id": "1",
+          "name": "Gazelle Shoes",
+          "color": "Almost Blue / Bright Blue / Almost Yellow",
+          "size": "6.5",
+          "price": 120,
+          "image": "https://i.imgur.com/FKfCYiz.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Gazelle Shoes",
+          "color": "Ivory / Cloud White / Bold Gold",
+          "size": "6.5",
+          "price": 120,
+          "image": "https://i.imgur.com/FKfCYiz.jpg",
+          "quantity": 2
+        },
+        {
+          "id": "1",
+          "name": "Gazelle Shoes",
+          "color": "Ivory / Cloud White / Bold Gold",
+          "size": "8",
+          "price": 120,
+          "image": "https://i.imgur.com/FKfCYiz.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Trae young 3 basketball shoes",
+          "color": "Arctic Night / Core Black / Acid Orange",
+          "size": "8.5",
+          "price": 140,
+          "image": "https://i.imgur.com/xFryZAl.jpg",
+          "quantity": 3
+        },
+        {
+          "id": "2",
+          "name": "Trae young 3 basketball shoes",
+          "color": "Wonder Beige / Grey Five / Wonder White",
+          "size": "7.5",
+          "price": 140,
+          "image": "https://i.imgur.com/xFryZAl.jpg",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 1286.99
+    }
+  ]
+}

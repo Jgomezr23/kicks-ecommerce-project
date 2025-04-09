@@ -1,0 +1,75 @@
+<section class="product-page-container" *ngIf="singleShoe">
+  <section class="gallery">
+    <img
+      src="{{ singleShoe.images[0] }}"
+      class="img-1"
+      alt="{{ singleShoe.name }} gallery 1"
+    />
+    <img
+      src="{{ singleShoe.images[1] }}"
+      class="img-2"
+      alt="{{ singleShoe.name }} gallery 2"
+    />
+    <img
+      src="{{ singleShoe.images[2] }}"
+      class="img-3"
+      alt="{{ singleShoe.name }} gallery 3"
+    />
+    <img
+      src="{{ singleShoe.images[3] }}"
+      class="img-4"
+      alt="{{ singleShoe.name }} gallery 4"
+    />
+  </section>
+  <section class="about-container">
+    <article class="details">
+      <span class="release" *ngIf="singleShoe.newRelease === 'true'"
+        >New Release</span
+      >
+      <h1>{{ singleShoe.name }}</h1>
+      <span class="price">{{ singleShoe.price | currency : "USD" }}</span>
+      <div class="color-selector">
+        <label for="colors">Color</label>
+        <select name="colors" id="colors" [(ngModel)]="selectedColor">
+          <option *ngFor="let color of singleShoe.colors" value="{{ color }}">
+            {{ color }}
+          </option>
+        </select>
+      </div>
+      <div class="size-selector">
+        <label for="colors">Size</label>
+        <select name="sizes" id="sizes" [(ngModel)]="selectedSize">
+          <option *ngFor="let size of singleShoe.sizes" value="{{ size }}">
+            {{ size }}
+          </option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button
+          type="button"
+          class="btn add-cart"
+          (click)="addToCart(singleShoe)"
+        >
+          Add to cart
+        </button>
+        <div class="danger" *ngIf="showAddedToCartMessage">
+          {{ singleShoe.name }} has been added to the cart
+        </div>
+        <button
+          type="button"
+          class="btn buy-now"
+          routerLink="/cart"
+          (click)="addToCart(singleShoe)"
+        >
+          Buy it now
+        </button>
+      </div>
+    </article>
+    <article class="about">
+      <h2>About the product</h2>
+      <p>
+        {{ singleShoe.about }}
+      </p>
+    </article>
+  </section>
+</section>

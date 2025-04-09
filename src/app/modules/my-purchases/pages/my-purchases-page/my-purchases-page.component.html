@@ -1,0 +1,27 @@
+<ng-template #noPurchase>
+  <section class="template">
+    <h1>you don't have purchases yet</h1>
+  </section>
+</ng-template>
+
+<section class="container" *ngIf="purchases.length > 0; else noPurchase">
+  <h1>My Purchases</h1>
+  <section class="products-container">
+    <article class="product" *ngFor="let item of purchases">
+      <h3>{{ item.name }}</h3>
+      <div class="product-info">
+        <img src="{{ item.image }}" alt="{{ item.name }}" />
+        <div class="info">
+          <p><span>Color: </span>{{ item.color }}</p>
+          <p><span>Size: </span>{{ item.size }}</p>
+          <p><span>Quantity: </span>{{ item.quantity }}</p>
+          <p><span>Price: </span>{{ item.price | currency : "USD" }}</p>
+          <p>
+            <span>Total price: </span
+            >{{ item.price * item.quantity | currency : "USD" }}
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+</section>

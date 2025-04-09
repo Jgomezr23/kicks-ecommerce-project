@@ -1,0 +1,57 @@
+header {
+  background-color: #e7e7e3;
+  padding: 1.5rem 3rem;
+}
+
+nav {
+  background-color: #fafafa;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 1.5rem;
+}
+
+ul {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-right: -3rem;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.fa-solid {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fa-user-tie {
+  color: #795fec;
+  font-size: 1.55rem;
+}
+
+.btn {
+  padding: 0.5rem 1.7rem;
+  border: transparent;
+  color: #fafafa;
+}
+
+.login {
+  background-color: #795fec;
+}
+
+.logout {
+  background-color: #d30101;
+}
+
+img {
+  cursor: pointer;
+  margin-left: -7rem;
+}

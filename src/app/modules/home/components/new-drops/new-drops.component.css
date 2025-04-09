@@ -1,0 +1,73 @@
+.new-drops-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3.5rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  width: 550px;
+  color: #232321;
+}
+
+.new-drops {
+  display: grid;
+  grid-template-columns: repeat(4, 350px);
+  justify-content: center;
+  gap: 2.3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.card-img {
+  position: relative;
+}
+
+.purple {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #4a69e2;
+  padding: 0.8rem 1rem;
+  color: #fafafa;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+p {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+img {
+  width: 350px;
+  border: 10px solid #fafafa;
+  border-radius: 2.3rem;
+}
+
+.btn {
+  background-color: #232321;
+  color: #fafafa;
+  justify-self: self-end;
+}
+
+.btn-purple {
+  background-color: #4a69e2;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}

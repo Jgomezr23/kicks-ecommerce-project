@@ -1,0 +1,32 @@
+<section class="listing-container">
+  <article class="banner">
+    <h1>Step into Style: Explore Our Latest Shoe Collection!</h1>
+    <p>
+      Welcome to Kicks, where every step is a statement, step into our world of
+      footwear and find your perfect pair today!
+    </p>
+  </article>
+  <ul class="categories-menu">
+    <li (click)="getAllShoes()">All</li>
+    <li
+      *ngFor="let category of categories"
+      (click)="selectCategory(category.id)"
+    >
+      {{ category.name }}
+    </li>
+  </ul>
+  <article class="products-list">
+    <section class="single-product" *ngFor="let product of shoes">
+      <img
+        src="{{ product.images[0] }}"
+        alt="{{ product.name }}"
+        class="product-img"
+      />
+      <p>{{ product.name }}</p>
+      <button type="button" class="btn" routerLink="/shoes/{{ product.id }}">
+        View Product -
+        <span class="yellow">{{ product.price | currency : "USD" }}</span>
+      </button>
+    </section>
+  </article>
+</section>

@@ -1,0 +1,26 @@
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/shoes/new-drops">New Drops🔥</a></li>
+      <li><a routerLink="/shoes">Explore</a></li>
+      <li><a routerLink="/about-us">About Us</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+    <img src="https://i.imgur.com/iat3X4i.png" alt="logo" routerLink="/" />
+    <div class="icons">
+      <i class="fa-solid fa-cart-shopping" routerLink="/cart"></i>
+      <i class="fa-solid fa-user" routerLink="/my-purchases"></i>
+      <i class="fa-solid fa-user-tie" *ngIf="isAdmin()" routerLink="/admin"></i>
+      <button
+        *ngIf="!isAuthenticated()"
+        class="btn login"
+        routerLink="auth/login"
+      >
+        Login
+      </button>
+      <button *ngIf="isAuthenticated()" class="btn logout" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,21 @@
+<section class="new-drops-container">
+  <article class="title">
+    <h2>Don’t miss out new drops</h2>
+    <button class="btn btn-purple" routerLink="/shoes/new-drops">
+      Shop New Drops
+    </button>
+  </article>
+  <article class="new-drops">
+    <section *ngFor="let shoe of shoes" class="card">
+      <div class="card-img">
+        <span class="purple">New</span>
+        <img src="{{ shoe.images[0] }}" alt="{{ shoe.name }}" />
+      </div>
+      <p>{{ shoe.name }}</p>
+      <button class="btn" routerLink="/shoes/{{ shoe.id }}">
+        View Product -
+        <span class="yellow">{{ shoe.price | currency : "USD" }}</span>
+      </button>
+    </section>
+  </article>
+</section>

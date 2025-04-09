@@ -1,0 +1,62 @@
+<ng-template #noCartItems>
+  <section class="template">
+    <h1>You don't have any items in the cart</h1>
+  </section>
+</ng-template>
+
+<section class="container" *ngIf="cartItems.length > 0; else noCartItems">
+  <h1>Cart</h1>
+  <div class="cart-container">
+    <article class="cart">
+      <section class="product" *ngFor="let item of cartItems; let i = index">
+        <img src="{{ item.image }}" alt="{{ item.name }}" />
+        <div class="product-info">
+          <h3>{{ item.name }}</h3>
+          <p><span>Color: </span>{{ item.color }}</p>
+          <p><span>Size: </span>{{ item.size }}</p>
+          <p class="delete" (click)="deleteCartItem(item)">Delete</p>
+        </div>
+        <div class="product-quantity">
+          <p>Quantity</p>
+          <div class="quantity-container">
+            <button type="button" class="btn" (click)="decreaseQuantity(item)">
+              -
+            </button>
+            <span>{{ item.quantity }}</span>
+            <button type="button" class="btn" (click)="increaseQuantity(item)">
+              +
+            </button>
+          </div>
+        </div>
+        <p class="price">
+          {{ item.price * item.quantity | currency : "USD" }}
+        </p>
+      </section>
+    </article>
+    <article class="summary-container">
+      <h2><i class="fa-solid fa-bag-shopping"></i>Order Summary</h2>
+      <section class="summary">
+        <div class="row">
+          <p>Order</p>
+          <p>{{ totalPrice | currency : "USD" }}</p>
+        </div>
+        <div class="row">
+          <p>Delivery</p>
+          <p>$6.99</p>
+        </div>
+        <div class="row">
+          <p>Sales Tax</p>
+          <p>0</p>
+        </div>
+        <div class="divider"></div>
+        <div class="row bold">
+          <p>Total</p>
+          <p>{{ totalPrice + 6.99 | currency : "USD" }}</p>
+        </div>
+        <button type="button" class="btn" routerLink="/cart/checkout">
+          Checkout
+        </button>
+      </section>
+    </article>
+  </div>
+</section>

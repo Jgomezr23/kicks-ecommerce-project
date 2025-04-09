@@ -1,0 +1,86 @@
+<section class="footer-container">
+  <article class="footer-discount">
+    <section class="discount-container">
+      <div class="discount-info">
+        <h2>Join our KicksPlus Club & get 15% off</h2>
+        <p>Sign up for free! Join the community.</p>
+        <form [formGroup]="discountForm" (ngSubmit)="onSubmit()">
+          <input
+            type="text"
+            placeholder="Email address"
+            formControlName="email"
+          />
+          <button type="submit" class="btn" [disabled]="!discountForm.valid">
+            Submit
+          </button>
+        </form>
+        <div
+          *ngIf="email?.touched && email?.errors?.['required']"
+          class="danger"
+        >
+          Email is required
+        </div>
+
+        <div *ngIf="email?.touched && email?.errors?.['email']" class="danger">
+          Please enter a valid email address
+        </div>
+      </div>
+      <img src="https://i.imgur.com/yifOw7C.png" alt="logo" />
+    </section>
+    <footer>
+      <section class="footer-info">
+        <article class="about-us">
+          <h3>About us</h3>
+          <p>
+            We are the biggest hyperstore in the universe. We got you all cover
+            with our exclusive collections and latest drops.
+          </p>
+        </article>
+        <article class="info-container">
+          <div class="info">
+            <h3>Categories</h3>
+            <ul>
+              <li><a routerLink="/shoes">Sneakers</a></li>
+              <li><a routerLink="/shoes">Basketball</a></li>
+              <li><a routerLink="/shoes">Runners</a></li>
+              <li><a routerLink="/shoes">Outdoor</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <h3>Company</h3>
+            <ul>
+              <li><a routerLink="/about-us">About</a></li>
+              <li><a routerLink="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <h3>Follow us</h3>
+            <ul class="follow-us">
+              <li>
+                <a href="https://web.facebook.com/" target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/" target="_blank"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+      <img src="https://i.imgur.com/U8PAqzH.png" alt="logo" />
+    </footer>
+  </article>
+</section>

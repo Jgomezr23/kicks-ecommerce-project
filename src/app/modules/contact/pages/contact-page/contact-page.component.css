@@ -1,0 +1,121 @@
+.container {
+  background-color: #e7e7e3;
+  padding: 0 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  background: url("https://i.imgur.com/NfjyTRd.png") no-repeat center/cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.hero p {
+  width: 900px;
+  font-size: 1.6rem;
+}
+
+h1,
+.hero p {
+  color: #fafafa;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #4942e4;
+}
+
+.contact-form {
+  padding: 3rem;
+  background-color: #fafafa;
+  border-radius: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+label {
+  font-weight: 800;
+}
+
+.form-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  padding: 1rem 0.8rem;
+  width: 600px;
+}
+
+textarea {
+  width: 1230px;
+  max-width: 1500px;
+  height: 300px;
+  font-family: "Rubik", sans-serif;
+  padding: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1.5px solid #4942e4;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+}
+
+.btn {
+  width: 500px;
+  font-size: 1.2rem;
+  background-color: #4942e4;
+  color: #fafafa;
+  border: transparent;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 0 3rem 3.5rem;
+  border-radius: 2rem;
+}
+
+.map h2 {
+  margin: 3.5rem 0 1rem;
+}

@@ -1,0 +1,107 @@
+<section class="container">
+  <img src="https://i.imgur.com/gHiu6KQ.png" alt="register img" />
+  <article class="register">
+    <h1>Register Admin</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <p>Your details</p>
+      <input type="text" placeholder="First Name" formControlName="firstName" />
+
+      <div
+        *ngIf="firstName?.touched && firstName?.errors?.['required']"
+        class="danger"
+      >
+        First Name is required
+      </div>
+
+      <div
+        *ngIf="firstName?.touched && firstName?.errors?.['minlength']"
+        class="danger"
+      >
+        First Name must be longer than
+        {{ firstName?.errors?.['minlength']?.requiredLength }} characters
+      </div>
+
+      <input type="text" placeholder="Last Name" formControlName="lastName" />
+
+      <div
+        *ngIf="lastName?.touched && lastName?.errors?.['required']"
+        class="danger"
+      >
+        Last name is required
+      </div>
+
+      <div
+        *ngIf="lastName?.touched && lastName?.errors?.['minlength']"
+        class="danger"
+      >
+        Last Name must be longer than
+        {{ lastName?.errors?.['minlength']?.requiredLength }} characters
+      </div>
+
+      <input
+        type="text"
+        placeholder="Phone Number"
+        formControlName="phoneNumber"
+        (input)="onPhoneNumberInput($event)"
+      />
+
+      <div
+        *ngIf="phoneNumber?.touched && phoneNumber?.errors?.['required']"
+        class="danger"
+      >
+        Phone number is required
+      </div>
+
+      <div
+        *ngIf="phoneNumber?.touched && phoneNumber?.errors?.['invalidPhoneNumber']"
+        class="danger"
+      >
+        Phone number must have exactly 10 numbers
+      </div>
+
+      <p>Login Details</p>
+      <input type="email" placeholder="Email" formControlName="email" />
+
+      <div *ngIf="email?.touched && email?.errors?.['required']" class="danger">
+        Email is required
+      </div>
+
+      <div *ngIf="email?.touched && email?.errors?.['email']" class="danger">
+        Please enter a valid email address
+      </div>
+
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+
+      <div
+        *ngIf="password?.touched && password?.errors?.['required']"
+        class="danger"
+      >
+        Password is required
+      </div>
+
+      <div
+        *ngIf="password?.touched && password?.errors?.['minlength']"
+        class="danger"
+      >
+        Password must be longer than
+        {{ password?.errors?.['minlength']?.requiredLength }} characters
+      </div>
+
+      <div *ngIf="errorSession" class="danger">
+        The email is already registered
+      </div>
+
+      <button class="btn" [disabled]="!registerForm.valid">
+        Register
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </form>
+    <p class="account">
+      Already have an account? <a routerLink="/auth/login">Log in</a>
+    </p>
+  </article>
+</section>

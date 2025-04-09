@@ -1,0 +1,53 @@
+.container {
+  background-color: #e7e7e3;
+  padding: 0 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  background: url("https://i.imgur.com/Ab8Ffbw.png") no-repeat center/cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.hero p {
+  width: 1200px;
+  font-size: 2rem;
+}
+
+h1,
+.hero p {
+  color: #fafafa;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 3.5rem 7rem 4rem;
+  background-color: #fafafa;
+  border-radius: 2rem;
+}
+
+.about-info p {
+  font-size: 1.18rem;
+  text-align: justify;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #4a69e2;
+}

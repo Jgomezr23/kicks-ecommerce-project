@@ -1,0 +1,65 @@
+.listing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e7e7e3;
+  gap: 4rem;
+  padding: 0 3rem 4rem;
+}
+
+.banner {
+  width: 92vw;
+  height: 80vh;
+  background: url("https://i.imgur.com/lVaHXmW.png") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  color: #fafafa;
+  border-radius: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.banner p {
+  font-size: 2rem;
+  text-align: center;
+  width: 1300px;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 4rem;
+}
+
+.single-product {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.product-img {
+  padding: 0.8rem;
+  background-color: #fafafa;
+  border-radius: 2rem;
+  width: 400px;
+  height: 470px;
+  object-fit: cover;
+}
+
+.single-product p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.btn {
+  background-color: #232321;
+  color: #fafafa;
+  font-weight: normal;
+  font-weight: bold;
+}

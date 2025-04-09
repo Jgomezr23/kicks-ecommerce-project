@@ -1,0 +1,24 @@
+<section class="listing-container">
+  <article class="banner">
+    <h1>New Drops</h1>
+    <p>
+      Fresh Kicks Alert! Discover our latest shoe arrivals. Step into style with
+      our newest drops – from trendy sneakers to chic boots, we've got your shoe
+      game covered.
+    </p>
+  </article>
+  <article class="products-list">
+    <section class="single-product" *ngFor="let product of shoes">
+      <img
+        src="{{ product.images[0] }}"
+        alt="{{ product.name }}"
+        class="product-img"
+      />
+      <p>{{ product.name }}</p>
+      <button type="button" class="btn" routerLink="/shoes/{{ product.id }}">
+        View Product -
+        <span class="yellow">{{ product.price | currency : "USD" }}</span>
+      </button>
+    </section>
+  </article>
+</section>
