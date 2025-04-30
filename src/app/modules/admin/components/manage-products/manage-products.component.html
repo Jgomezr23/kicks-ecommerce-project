@@ -36,7 +36,12 @@
 
         <ng-container matColumnDef="images">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Images</th>
-          <td mat-cell *matCellDef="let row">{{ row.images }}</td>
+          <td mat-cell *matCellDef="let row">
+            <span *ngFor="let image of row.images">
+              {{ image }}
+              <br />
+            </span>
+          </td>
         </ng-container>
 
         <ng-container matColumnDef="price">
@@ -46,7 +51,12 @@
 
         <ng-container matColumnDef="colors">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Colors</th>
-          <td mat-cell *matCellDef="let row">{{ row.colors }}</td>
+          <td mat-cell *matCellDef="let row">
+            <span *ngFor="let color of row.colors">
+              {{ color }}
+              <br />
+            </span>
+          </td>
         </ng-container>
 
         <ng-container matColumnDef="sizes">
